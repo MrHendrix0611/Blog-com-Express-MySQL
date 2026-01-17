@@ -1,0 +1,21 @@
+
+<nav class='navbar'>
+    <button onclick="window.location.href='/criarPost'">Novo</button>
+    <div class="search-container">
+        <input type="text" placeholder="Pesquisar...">
+    </div>
+</nav>
+
+<div class="main_content">
+    {{#each posts}}
+    <div class="post_content">
+        <h1>{{titulo}}</h1>
+        <h2>{{conteudo}}</h2>
+    
+        {{#if imagem}}
+            <img src="/uploads/{{imagem}}" alt="Imagem do post" style="max-width: 300px;">
+        {{/if}}
+        <br>
+    </div>
+    {{/each}}
+</div>
